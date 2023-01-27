@@ -1,0 +1,28 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "sass": "sass ./src/sass:./public/css --watch",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilson-kbs/oc-ohmyfood.git"
+  },
+  "author": "Wilson-kbs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilson-kbs/oc-ohmyfood/issues"
+  },
+  "homepage": "https://github.com/wilson-kbs/oc-ohmyfood#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.57.1"
+  }
+}
