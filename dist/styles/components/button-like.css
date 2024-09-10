@@ -1,0 +1,26 @@
+.button-like {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 24px;
+}
+.button-like__input {
+  display: none;
+}
+.button-like__icon.liked {
+  display: none;
+}
+.button-like__input:checked ~ .button-like__icon:not(.liked) {
+  display: none;
+}
+.button-like__input:checked ~ .button-like__icon.liked {
+  display: block;
+}
+.button-like__input:checked ~ .button-like__icon {
+  background: linear-gradient(180deg, #e471db, #a561dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
