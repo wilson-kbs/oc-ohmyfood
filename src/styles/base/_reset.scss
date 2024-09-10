@@ -1,0 +1,25 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+address {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+}
+
