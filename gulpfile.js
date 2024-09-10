@@ -8,20 +8,20 @@ function buildAssets() {
 }
 
 function buildStyles() {
-    return src('src/sass/**/*.scss')
+    return src('src/styles/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(dest('./dist/css'));
+        .pipe(dest('dist/styles/'));
 }
 
 function buildHTML() {
-    return src('src/*.html')
-        .pipe(dest('dist/'))
+    return src('src/**/*.html')
+        .pipe(dest('dist/'));
 }
 
 function watcher() {
     watch('src/assets/**/*', buildAssets);
-    watch('src/sass/**/*.scss', buildStyles);
-    watch('src/*.html', buildHTML);
+    watch('src/styles/**/*.scss', buildStyles);
+    watch('src/**/*.html', buildHTML);
     return Promise.resolve();
 }
 
@@ -41,8 +41,11 @@ function liveServerStart() {
 }
 
 const build = parallel(buildStyles, buildHTML, buildAssets);
+const dev = series(build, watcher, liveServerStart);
 
-exports.build = build;
-exports.default = build;
-exports.watch = watcher;
-exports.dev = series(build, watcher, liveServerStart);
+module.exports = {
+    default: build,
+    build,
+    dev,
+    watch: watcher,
+}
