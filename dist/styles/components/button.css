@@ -5,4 +5,11 @@
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
+  transition: filter 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }

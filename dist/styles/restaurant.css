@@ -340,6 +340,124 @@ html {
   font-family: "Shrikhand", cursive;
 }
 
+body {
+  overflow: hidden;
+  animation: lockScroll 0s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes lockScroll {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: auto;
+  }
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  animation: fadeOut 1s forwards;
+  animation-delay: 2s;
+}
+.loader__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader__icon-container {
+  display: flex;
+  --icon-size: 100px;
+  animation: spinAndSeparate 1s infinite;
+}
+.loader__icon-container .flat-plate {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  background: linear-gradient(180deg, #e471db, #a561dc);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader__icon-container .inner-plate {
+  width: 80%;
+  height: 80%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader__icon-container .bottom-plate {
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(0deg, #e471db, #a561dc);
+  background-clip: border-box;
+  border-radius: 50%;
+}
+.loader__icon-container .fork-container,
+.loader__icon-container .knife-container {
+  width: calc(var(--icon-size) / 2);
+  height: var(--icon-size);
+  overflow: hidden;
+  position: relative;
+  opacity: 0.8;
+}
+.loader__icon-container .fork-container i,
+.loader__icon-container .knife-container i {
+  font-size: var(--icon-size);
+  position: absolute;
+  top: 0;
+  background: linear-gradient(0deg, #e471db, #a561dc);
+  background-clip: text;
+  color: transparent;
+}
+.loader__icon-container .fork-container i {
+  left: 0;
+}
+.loader__icon-container .knife-container i {
+  left: calc(-1 * var(--icon-size) / 2);
+}
+
+@keyframes spinAndSeparate {
+  0% {
+    transform: rotate(0deg);
+    gap: 0;
+  }
+  50% {
+    gap: 30px;
+  }
+  100% {
+    transform: rotate(360deg);
+    gap: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+  50% {
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
 .header__wrapper {
   position: relative;
   display: flex;
@@ -566,6 +684,46 @@ body {
   max-width: calc(100% - var(--checkbox-size));
 }
 
+.plate:nth-child(1) {
+  animation-delay: 2500ms;
+}
+
+.plate:nth-child(2) {
+  animation-delay: 2700ms;
+}
+
+.plate:nth-child(3) {
+  animation-delay: 2900ms;
+}
+
+.plate:nth-child(4) {
+  animation-delay: 3100ms;
+}
+
+.plate:nth-child(5) {
+  animation-delay: 3300ms;
+}
+
+.plate:nth-child(6) {
+  animation-delay: 3500ms;
+}
+
+.plate:nth-child(7) {
+  animation-delay: 3700ms;
+}
+
+.plate:nth-child(8) {
+  animation-delay: 3900ms;
+}
+
+.plate:nth-child(9) {
+  animation-delay: 4100ms;
+}
+
+.plate:nth-child(10) {
+  animation-delay: 4300ms;
+}
+
 @media (min-width: 768px) {
   .page__bg-img {
     top: 96px;
@@ -590,6 +748,13 @@ body {
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
+  transition: filter 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .button-like {
@@ -599,11 +764,19 @@ body {
   padding: 0;
   font-size: 24px;
 }
+.button-like * {
+  cursor: pointer;
+}
 .button-like__input {
   display: none;
 }
 .button-like__icon.liked {
   display: none;
+  background: linear-gradient(180deg, #e471db, #a561dc);
+  background-clip: text;
+  color: transparent;
+  clip-path: inset(0 100% 0 0);
+  animation: fill 0.3s ease-in forwards;
 }
 .button-like__input:checked ~ .button-like__icon:not(.liked) {
   display: none;
@@ -611,10 +784,20 @@ body {
 .button-like__input:checked ~ .button-like__icon.liked {
   display: block;
 }
-.button-like__input:checked ~ .button-like__icon {
-  background: linear-gradient(180deg, #e471db, #a561dc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+
+@media (min-width: 768px) {
+  .button-like__label:hover .button-like__icon:not(.liked) {
+    display: none;
+  }
+  .button-like__label:hover .button-like__icon.liked {
+    display: block;
+  }
+}
+@keyframes fill {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
 }
