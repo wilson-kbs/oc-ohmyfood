@@ -1,219 +1,289 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À la française - OhMyFood</title>
-  <link rel="stylesheet" href="../styles/restaurant.css">
-  <script src="https://kit.fontawesome.com/936f550d2f.js" crossorigin="anonymous"></script>
-</head>
-<body>
-<header class="header">
-  <div class="header__wrapper">
-    <div class="header__back-btn">
-      <a href="..">
-        <i class="fa-solid fa-arrow-left"></i>
-      </a>
-    </div>
-    <div class="header__logo">
-      <span class="header__logo-text font-shrikhand">ohmyfood</span>
-    </div>
-  </div>
-</header>
-  <main class="page">
-    <img class="page__bg-img" src="../assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
-    <section class="page-content">
-      <div class="page-content__wrapper">
-        <header class="page-content__header">
-          <h1 class="page-content__title font-shrikhand">À la française</h1>
-          <button class="button-like">
-            <label class="button-like__label">
-              <input
-                type="checkbox"
-                class="button-like__input"
-              />
-              <i
-                class="fa-regular fa-heart button-like__icon"
-              ></i>
-              <i
-                class="fa-solid fa-heart button-like__icon liked"
-              ></i>
-            </label>
-          </button>
-        </header>
-        <form class="menu">
-          <section class="menu__section">
-            <h2 class="menu__section__title">Entrées</h2>
-            <div class="menu__section-list">
-              <article class="plate menu__plate" style="--animation-delay: 200ms;">
-                <label class="plate__label">
-                  <input class="plate__input" type="checkbox">
-                  <div class="plate__content">
-                    <div class="plate__info">
-                      <span class="plate__name">Tartare de poulpe acidulé</span>
-                      <span class="plate__description">Aux zestes d'orange</span>
-                    </div>
-                    <span class="plate__price">25€</span>
-                  </div>
-                  <div class="plate__checkbox">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </label>
-              </article>
-              <article class="plate menu__plate" style="--animation-delay: 400ms;">
-                <label class="plate__label">
-                  <input class="plate__input" type="checkbox">
-                  <div class="plate__content">
-                    <div class="plate__info">
-                      <span class="plate__name">Velouté de légumes d'antan</span>
-                      <span class="plate__description">Carotte, panais, topinambour</span>
-                    </div>
-                    <span class="plate__price">35€</span>
-                  </div>
-                  <div class="plate__checkbox">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </label>
-              </article>
-              <article class="plate menu__plate" style="--animation-delay: 600ms;">
-                <label class="plate__label">
-                  <input class="plate__input" type="checkbox">
-                  <div class="plate__content">
-                    <div class="plate__info">
-                      <span class="plate__name">Soupe à l'oignon</span>
-                      <span class="plate__description">Revisitée</span>
-                    </div>
-                    <span class="plate__price">20€</span>
-                  </div>
-                  <div class="plate__checkbox">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </label>
-              </article>
-            </div>
-          </section>
-          <section class="menu__section">
-            <h2 class="menu__section__title">Plats</h2>
-            <div class="menu__section-list">
-              <article class="plate menu__plate" style="--animation-delay: 200ms;">
-                <label class="plate__label">
-                  <input class="plate__input" type="checkbox">
-                  <div class="plate__content">
-                    <div class="plate__info">
-                      <span class="plate__name">Coquilles Saint-Jacques</span>
-                      <span class="plate__description">Accompagnées d'une purée de panais</span>
-                    </div>
-                    <span class="plate__price">40€</span>
-                  </div>
-                  <div class="plate__checkbox">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </label>
-              </article>
-              <article class="plate menu__plate" style="--animation-delay: 400ms;">
-                <label class="plate__label">
-                  <input class="plate__input" type="checkbox">
-                  <div class="plate__content">
-                    <div class="plate__info">
-                      <span class="plate__name">Magret de canard</span>
-                      <span class="plate__description">Et parmentier de pommes de terre</span>
-                    </div>
-                    <span class="plate__price">35€</span>
-                  </div>
-                  <div class="plate__checkbox">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </label>
-              </article>
-              <article class="plate menu__plate" style="--animation-delay: 600ms;">
-                <label class="plate__label">
-                  <input class="plate__input" type="checkbox">
-                  <div class="plate__content">
-                    <div class="plate__info">
-                      <span class="plate__name">Pigeonneau d’Ille-et-Vilaine</span>
-                      <span class="plate__description">Sur son lit de gnocchis aux légumes</span>
-                    </div>
-                    <span class="plate__price">44€</span>
-                  </div>
-                  <div class="plate__checkbox">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </label>
-              </article>
-            </div>
-          </section>
-          <section class="menu__section">
-            <h2 class="menu__section__title">Desserts</h2>
-            <div class="menu__section-list">
-              <article class="plate menu__plate" style="--animation-delay: 200ms;">
-                <label class="plate__label">
-                  <input class="plate__input" type="checkbox">
-                  <div class="plate__content">
-                    <div class="plate__info">
-                      <span class="plate__name">Pétales de violettes glacés</span>
-                      <span class="plate__description">Et purée de noisettes</span>
-                    </div>
-                    <span class="plate__price">18€</span>
-                  </div>
-                  <div class="plate__checkbox">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </label>
-              </article>
-              <article class="plate menu__plate" style="--animation-delay: 400ms;">
-                <label class="plate__label">
-                  <input class="plate__input" type="checkbox">
-                  <div class="plate__content">
-                    <div class="plate__info">
-                      <span class="plate__name">Fondant au chocolat</span>
-                      <span class="plate__description">Revisité</span>
-                    </div>
-                    <span class="plate__price">22€</span>
-                  </div>
-                  <div class="plate__checkbox">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </label>
-              </article>
-              <article class="plate menu__plate" style="--animation-delay: 600ms;">
-                <label class="plate__label">
-                  <input class="plate__input" type="checkbox">
-                  <div class="plate__content">
-                    <div class="plate__info">
-                      <span class="plate__name">Millefeuille croustillant</span>
-                      <span class="plate__description">Myrtilles et pâte d’amande</span>
-                    </div>
-                    <span class="plate__price">23€</span>
-                  </div>
-                  <div class="plate__checkbox">
-                    <i class="fa-solid fa-circle-check"></i>
-                  </div>
-                </label>
-              </article>
-            </div>
-          </section>
-          <div class="menu__action">
-            <button class="menu__action__submit primary-btn">Commander</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À la française - OhMyFood</title>
+    <link rel="stylesheet" href="../styles/restaurant.css" />
+    <script
+      src="https://kit.fontawesome.com/936f550d2f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader__wrapper">
+        <div class="loader__icon-container">
+          <div class="fork-container">
+            <i class="fas fa-utensils"></i>
           </div>
-        </form>
+          <div class="flat-plate">
+            <div class="inner-plate">
+              <div class="bottom-plate"></div>
+            </div>
+          </div>
+          <div class="knife-container">
+            <i class="fas fa-utensils"></i>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="footer__logo">
-      <span class="footer__logo-text font-shrikhand">ohmyfood</span>
     </div>
-    <ul class="footer__content">
-      <li class="footer__content-item">
-        <i class="fa-solid fa-utensils"></i> Proposer un restaurant
-      </li>
-      <li class="footer__content-item">
-        <i class="fa-solid fa-handshake-angle"></i> Devenir partenaire
-      </li>
-      <li class="footer__content-item">Mentions légales</li>
-      <li class="footer__content-item">Contact</li>
-    </ul>
-  </footer>
-</body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__back-btn">
+          <a href="..">
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+        </div>
+        <div class="header__logo">
+          <span class="header__logo-text font-shrikhand">ohmyfood</span>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <img
+        class="page__bg-img"
+        src="../assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+        alt="À la française"
+      />
+      <section class="page-content">
+        <div class="page-content__wrapper">
+          <header class="page-content__header">
+            <h1 class="page-content__title font-shrikhand">À la française</h1>
+            <button class="button-like">
+              <label class="button-like__label">
+                <input type="checkbox" class="button-like__input" />
+                <i class="fa-regular fa-heart button-like__icon"></i>
+                <i class="fa-solid fa-heart button-like__icon liked"></i>
+              </label>
+            </button>
+          </header>
+          <form class="menu">
+            <section class="menu__section">
+              <h2 class="menu__section__title">Entrées</h2>
+              <div class="menu__section-list">
+                <article
+                  class="plate menu__plate"
+                  style="--animation-delay: 200ms"
+                >
+                  <label class="plate__label">
+                    <input class="plate__input" type="checkbox" />
+                    <div class="plate__content">
+                      <div class="plate__info">
+                        <span class="plate__name"
+                          >Tartare de poulpe acidulé</span
+                        >
+                        <span class="plate__description"
+                          >Aux zestes d'orange</span
+                        >
+                      </div>
+                      <span class="plate__price">25€</span>
+                    </div>
+                    <div class="plate__checkbox">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                  </label>
+                </article>
+                <article
+                  class="plate menu__plate"
+                  style="--animation-delay: 400ms"
+                >
+                  <label class="plate__label">
+                    <input class="plate__input" type="checkbox" />
+                    <div class="plate__content">
+                      <div class="plate__info">
+                        <span class="plate__name"
+                          >Velouté de légumes d'antan</span
+                        >
+                        <span class="plate__description"
+                          >Carotte, panais, topinambour</span
+                        >
+                      </div>
+                      <span class="plate__price">35€</span>
+                    </div>
+                    <div class="plate__checkbox">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                  </label>
+                </article>
+                <article
+                  class="plate menu__plate"
+                  style="--animation-delay: 600ms"
+                >
+                  <label class="plate__label">
+                    <input class="plate__input" type="checkbox" />
+                    <div class="plate__content">
+                      <div class="plate__info">
+                        <span class="plate__name">Soupe à l'oignon</span>
+                        <span class="plate__description">Revisitée</span>
+                      </div>
+                      <span class="plate__price">20€</span>
+                    </div>
+                    <div class="plate__checkbox">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                  </label>
+                </article>
+              </div>
+            </section>
+            <section class="menu__section">
+              <h2 class="menu__section__title">Plats</h2>
+              <div class="menu__section-list">
+                <article
+                  class="plate menu__plate"
+                  style="--animation-delay: 200ms"
+                >
+                  <label class="plate__label">
+                    <input class="plate__input" type="checkbox" />
+                    <div class="plate__content">
+                      <div class="plate__info">
+                        <span class="plate__name">Coquilles Saint-Jacques</span>
+                        <span class="plate__description"
+                          >Accompagnées d'une purée de panais</span
+                        >
+                      </div>
+                      <span class="plate__price">40€</span>
+                    </div>
+                    <div class="plate__checkbox">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                  </label>
+                </article>
+                <article
+                  class="plate menu__plate"
+                  style="--animation-delay: 400ms"
+                >
+                  <label class="plate__label">
+                    <input class="plate__input" type="checkbox" />
+                    <div class="plate__content">
+                      <div class="plate__info">
+                        <span class="plate__name">Magret de canard</span>
+                        <span class="plate__description"
+                          >Et parmentier de pommes de terre</span
+                        >
+                      </div>
+                      <span class="plate__price">35€</span>
+                    </div>
+                    <div class="plate__checkbox">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                  </label>
+                </article>
+                <article
+                  class="plate menu__plate"
+                  style="--animation-delay: 600ms"
+                >
+                  <label class="plate__label">
+                    <input class="plate__input" type="checkbox" />
+                    <div class="plate__content">
+                      <div class="plate__info">
+                        <span class="plate__name"
+                          >Pigeonneau d’Ille-et-Vilaine</span
+                        >
+                        <span class="plate__description"
+                          >Sur son lit de gnocchis aux légumes</span
+                        >
+                      </div>
+                      <span class="plate__price">44€</span>
+                    </div>
+                    <div class="plate__checkbox">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                  </label>
+                </article>
+              </div>
+            </section>
+            <section class="menu__section">
+              <h2 class="menu__section__title">Desserts</h2>
+              <div class="menu__section-list">
+                <article
+                  class="plate menu__plate"
+                  style="--animation-delay: 200ms"
+                >
+                  <label class="plate__label">
+                    <input class="plate__input" type="checkbox" />
+                    <div class="plate__content">
+                      <div class="plate__info">
+                        <span class="plate__name"
+                          >Pétales de violettes glacés</span
+                        >
+                        <span class="plate__description"
+                          >Et purée de noisettes</span
+                        >
+                      </div>
+                      <span class="plate__price">18€</span>
+                    </div>
+                    <div class="plate__checkbox">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                  </label>
+                </article>
+                <article
+                  class="plate menu__plate"
+                  style="--animation-delay: 400ms"
+                >
+                  <label class="plate__label">
+                    <input class="plate__input" type="checkbox" />
+                    <div class="plate__content">
+                      <div class="plate__info">
+                        <span class="plate__name">Fondant au chocolat</span>
+                        <span class="plate__description">Revisité</span>
+                      </div>
+                      <span class="plate__price">22€</span>
+                    </div>
+                    <div class="plate__checkbox">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                  </label>
+                </article>
+                <article
+                  class="plate menu__plate"
+                  style="--animation-delay: 600ms"
+                >
+                  <label class="plate__label">
+                    <input class="plate__input" type="checkbox" />
+                    <div class="plate__content">
+                      <div class="plate__info">
+                        <span class="plate__name"
+                          >Millefeuille croustillant</span
+                        >
+                        <span class="plate__description"
+                          >Myrtilles et pâte d’amande</span
+                        >
+                      </div>
+                      <span class="plate__price">23€</span>
+                    </div>
+                    <div class="plate__checkbox">
+                      <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                  </label>
+                </article>
+              </div>
+            </section>
+            <div class="menu__action">
+              <button class="menu__action__submit primary-btn">
+                Commander
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__logo">
+        <span class="footer__logo-text font-shrikhand">ohmyfood</span>
+      </div>
+      <ul class="footer__content">
+        <li class="footer__content-item">
+          <i class="fa-solid fa-utensils"></i> Proposer un restaurant
+        </li>
+        <li class="footer__content-item">
+          <i class="fa-solid fa-handshake-angle"></i> Devenir partenaire
+        </li>
+        <li class="footer__content-item">Mentions légales</li>
+        <li class="footer__content-item">Contact</li>
+      </ul>
+    </footer>
+  </body>
 </html>
