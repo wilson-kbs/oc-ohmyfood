@@ -183,6 +183,16 @@ body {
   }
 }
 
+$default-delay: 200ms;
+$total-items: 10;
+
+@for $i from 1 through $total-items {
+  .plate:nth-child(#{$i}) {
+    animation-delay: $default-delay * $i + 2300ms;
+  }
+}
+
+
 @media (min-width: 768px) {
   .page {
     &__bg-img {
