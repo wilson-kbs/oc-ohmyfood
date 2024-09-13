@@ -5,12 +5,21 @@
   padding: 0;
   font-size: 24px;
 
+  & * {
+    cursor: pointer;
+  }
+
   &__input {
     display: none;
   }
 
   &__icon.liked {
     display: none;
+    background: linear-gradient(180deg, #e471db, #a561dc);
+    background-clip: text;
+    color: transparent;
+    clip-path: inset(0 100% 0 0);
+    animation: fill 0.3s ease-in forwards;
   }
 
   &__input:checked ~ &__icon:not(.liked) {
@@ -20,12 +29,26 @@
   &__input:checked ~ &__icon.liked {
     display: block;
   }
+}
+@media (min-width: 768px) {
+  .button-like__label:hover {
+    .button-like {
+      &__icon:not(.liked) {
+        display: none;
+      }
 
-  &__input:checked ~ &__icon {
-    background: linear-gradient(180deg, #e471db, #a561dc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+      &__icon.liked {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes fill {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
   }
 }
