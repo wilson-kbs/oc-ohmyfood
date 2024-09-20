@@ -622,9 +622,15 @@ body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-delay: var(--animation-delay, 200ms);
+  display: flex;
+  position: relative;
 }
 .plate__label {
-  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 @media (min-width: 768px) {
   .plate__label:hover .plate__content {
