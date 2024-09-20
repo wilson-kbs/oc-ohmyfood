@@ -524,6 +524,66 @@ body {
     padding-right: 40px;
   }
 }
+.primary-btn {
+  background: linear-gradient(180deg, #E471DB, #A561DC);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: filter 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.button-like {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 24px;
+}
+.button-like * {
+  cursor: pointer;
+}
+.button-like__input {
+  display: none;
+}
+.button-like__icon.liked {
+  display: none;
+  background: linear-gradient(180deg, #e471db, #a561dc);
+  background-clip: text;
+  color: transparent;
+  clip-path: inset(0 100% 0 0);
+  animation: fill 0.3s ease-in forwards;
+}
+.button-like__input:checked ~ .button-like__icon:not(.liked) {
+  display: none;
+}
+.button-like__input:checked ~ .button-like__icon.liked {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .button-like__label:hover .button-like__icon:not(.liked) {
+    display: none;
+  }
+  .button-like__label:hover .button-like__icon.liked {
+    display: block;
+  }
+}
+@keyframes fill {
+  0% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
 .home-header-location {
   display: flex;
   justify-content: center;
@@ -552,8 +612,6 @@ body {
 }
 .home-header__link {
   margin-top: 20px;
-}
-.home-header__link button {
   font-size: 16px;
   padding: 15px 20px;
   border-radius: 50px;
@@ -678,7 +736,7 @@ body {
   padding: 7px 9px;
   border-radius: 2px;
   font-size: 14px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #008766;
 }
 .restaurants__item-title {
@@ -733,65 +791,5 @@ body {
   .restaurants__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 70px;
-  }
-}
-.primary-btn {
-  background: linear-gradient(180deg, #E471DB, #A561DC);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: filter 0.3s, box-shadow 0.3s;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.primary-btn:hover {
-  filter: brightness(1.1);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-}
-
-.button-like {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  font-size: 24px;
-}
-.button-like * {
-  cursor: pointer;
-}
-.button-like__input {
-  display: none;
-}
-.button-like__icon.liked {
-  display: none;
-  background: linear-gradient(180deg, #e471db, #a561dc);
-  background-clip: text;
-  color: transparent;
-  clip-path: inset(0 100% 0 0);
-  animation: fill 0.3s ease-in forwards;
-}
-.button-like__input:checked ~ .button-like__icon:not(.liked) {
-  display: none;
-}
-.button-like__input:checked ~ .button-like__icon.liked {
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .button-like__label:hover .button-like__icon:not(.liked) {
-    display: none;
-  }
-  .button-like__label:hover .button-like__icon.liked {
-    display: block;
-  }
-}
-@keyframes fill {
-  0% {
-    clip-path: inset(100% 0 0 0);
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
   }
 }

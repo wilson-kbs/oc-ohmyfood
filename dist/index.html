@@ -12,23 +12,23 @@
     ></script>
   </head>
   <body>
-  <div class="loader">
-    <div class="loader__wrapper">
-      <div class="loader__icon-container">
-        <div class="fork-container">
-          <i class="fas fa-utensils"></i>
-        </div>
-        <div class="flat-plate">
-          <div class="inner-plate">
-            <div class="bottom-plate"></div>
+    <div class="loader">
+      <div class="loader__wrapper">
+        <div class="loader__icon-container">
+          <div class="fork-container">
+            <i class="fas fa-utensils"></i>
           </div>
-        </div>
-        <div class="knife-container">
-          <i class="fas fa-utensils"></i>
+          <div class="flat-plate">
+            <div class="inner-plate">
+              <div class="bottom-plate"></div>
+            </div>
+          </div>
+          <div class="knife-container">
+            <i class="fas fa-utensils"></i>
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <header class="header">
       <div class="header__wrapper">
         <div class="header__logo">
@@ -51,8 +51,8 @@
           <p class="home-header__description">
             Découvrez des restaurants d'exception, sélectionnés par nos soins.
           </p>
-          <a class="home-header__link" href="#restaurants">
-            <button class="primary-btn">Explorer nos restaurants</button>
+          <a class="home-header__link primary-btn" href="#restaurants">
+            Explorer nos restaurants
           </a>
         </div>
       </section>
@@ -85,92 +85,109 @@
         <div class="restaurants__wrapper">
           <h2 class="restaurants__title title-section">Restaurants</h2>
           <div class="restaurants__list">
-            <a href="restaurants/la-palette-du-gout.html">
-              <article class="restaurants__item">
+            <article class="restaurants__item">
+              <a href="restaurants/la-palette-du-gout.html">
                 <img
                   class="restaurants__item-img"
                   src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                  alt="La palette du goût"
                 />
-                <div class="restaurants__item-badge">Nouveau</div>
-                <div class="restaurants__item-content-wrapper">
+              </a>
+              <div class="restaurants__item-badge">Nouveau</div>
+              <div class="restaurants__item-content-wrapper">
+                <a href="restaurants/la-palette-du-gout.html">
                   <div class="restaurants__item-content">
                     <h3 class="restaurants__item-title">La palette du goût</h3>
                     <p class="restaurants__item-description">Ménilmontant</p>
                   </div>
-                  <button class="button-like">
-                    <label class="button-like__label">
-                      <input type="checkbox" class="button-like__input" />
-                      <i class="fa-regular fa-heart button-like__icon"></i>
-                      <i class="fa-solid fa-heart button-like__icon liked"></i>
-                    </label>
-                  </button>
-                </div>
-              </article>
-            </a>
-            <a href="restaurants/la-note-enchantee.html">
-              <article class="restaurants__item">
+                </a>
+                <span class="button-like">
+                  <label class="button-like__label">
+                    <input type="checkbox" class="button-like__input" />
+                    <i class="fa-regular fa-heart button-like__icon"></i>
+                    <i class="fa-solid fa-heart button-like__icon liked"></i>
+                  </label>
+                </span>
+              </div>
+            </article>
+
+            <article class="restaurants__item">
+              <a href="restaurants/la-note-enchantee.html">
                 <img
                   class="restaurants__item-img"
                   src="./assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                  alt="La note enchantée"
                 />
-                <div class="restaurants__item-badge">Nouveau</div>
-                <div class="restaurants__item-content-wrapper">
+              </a>
+              <div class="restaurants__item-badge">Nouveau</div>
+              <div class="restaurants__item-content-wrapper">
+                <a href="restaurants/la-note-enchantee.html">
                   <div class="restaurants__item-content">
                     <h3 class="restaurants__item-title">La note enchantée</h3>
                     <p class="restaurants__item-description">Charonne</p>
                   </div>
-                  <button class="button-like">
-                    <label class="button-like__label">
-                      <input type="checkbox" class="button-like__input" />
-                      <i class="fa-regular fa-heart button-like__icon"></i>
-                      <i class="fa-solid fa-heart button-like__icon liked"></i>
-                    </label>
-                  </button>
-                </div>
-              </article>
-            </a>
-            <a href="restaurants/a-la-française.html">
-              <article class="restaurants__item">
+                </a>
+                <span class="button-like">
+                  <label class="button-like__label">
+                    <input type="checkbox" class="button-like__input" />
+                    <i class="fa-regular fa-heart button-like__icon"></i>
+                    <i class="fa-solid fa-heart button-like__icon liked"></i>
+                  </label>
+                </span>
+              </div>
+            </article>
+
+            <article class="restaurants__item">
+              <a href="restaurants/a-la-française.html">
                 <img
                   class="restaurants__item-img"
                   src="./assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                  alt="À la française"
                 />
-                <div class="restaurants__item-content-wrapper">
+              </a>
+              <div class="restaurants__item-content-wrapper">
+                <a href="restaurants/a-la-française.html">
                   <div class="restaurants__item-content">
                     <h3 class="restaurants__item-title">À la française</h3>
                     <p class="restaurants__item-description">Cité Rouge</p>
                   </div>
-                  <button class="button-like">
-                    <label class="button-like__label">
-                      <input type="checkbox" class="button-like__input" />
-                      <i class="fa-regular fa-heart button-like__icon"></i>
-                      <i class="fa-solid fa-heart button-like__icon liked"></i>
-                    </label>
-                  </button>
-                </div>
-              </article>
-            </a>
-            <a href="restaurants/le-delice-des-sens.html">
+                </a>
+                <span class="button-like">
+                  <label class="button-like__label">
+                    <input type="checkbox" class="button-like__input" />
+                    <i class="fa-regular fa-heart button-like__icon"></i>
+                    <i class="fa-solid fa-heart button-like__icon liked"></i>
+                  </label>
+                </span>
+              </div>
+            </article>
+
+
               <article class="restaurants__item">
+                <a href="restaurants/le-delice-des-sens.html">
                 <img
                   class="restaurants__item-img"
                   src="./assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                  alt="Le délice des sens"
                 />
+                </a>
                 <div class="restaurants__item-content-wrapper">
+                  <a href="restaurants/le-delice-des-sens.html">
                   <div class="restaurants__item-content">
                     <h3 class="restaurants__item-title">Le délice des sens</h3>
                     <p class="restaurants__item-description">Folie-Méricourt</p>
                   </div>
-                  <button class="button-like">
+                  </a>
+                  <span class="button-like">
                     <label class="button-like__label">
                       <input type="checkbox" class="button-like__input" />
                       <i class="fa-regular fa-heart button-like__icon"></i>
                       <i class="fa-solid fa-heart button-like__icon liked"></i>
                     </label>
-                  </button>
+                  </span>
                 </div>
               </article>
-            </a>
+
           </div>
         </div>
       </section>
